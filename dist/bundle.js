@@ -46,6 +46,53 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 const App = props => {
   const [credential, setCredential] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({});
+  const response = {
+    "challenge": "Bearer eyJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwiYWxnIjoiZGlyIn0..RrjD9y2LIh7TT3N-aIgBhg.BOG6VZgJ8tl1t7J_C09uawHNEHpEAcAhoBzsMB1yuKMYNt4si9sRVBeMYfAH6k0QF03iok9uiPHDKfo3yM0aV28mrDyBOhkc1iJPQCdi5tvV78SNconD6M_bgOgkdB6PI7bJLLIpZAKXhDuRHyolxyiVylwb-8JZSU9eHE0gpCvNVu0JvrAqaF9tyg8TiOPq.0y8DEsf1l1kZ33b0SHPzAx0bMU7PP4qHSpOvFA0SgAk",
+    "rp": {
+      "name": "SimpleWebAuthn Example",
+      "id": "localhost"
+    },
+    "user": {
+      "id": "1232",
+      "name": "PragyaA",
+      "displayName": "PragyaA"
+    },
+    "pubKeyCredParams": [{
+      "alg": -8,
+      "type": "public-key"
+    }, {
+      "alg": -7,
+      "type": "public-key"
+    }, {
+      "alg": -36,
+      "type": "public-key"
+    }, {
+      "alg": -37,
+      "type": "public-key"
+    }, {
+      "alg": -38,
+      "type": "public-key"
+    }, {
+      "alg": -39,
+      "type": "public-key"
+    }, {
+      "alg": -257,
+      "type": "public-key"
+    }, {
+      "alg": -258,
+      "type": "public-key"
+    }, {
+      "alg": -259,
+      "type": "public-key"
+    }],
+    "timeout": 60000,
+    "attestation": "none",
+    "excludeCredentials": [],
+    "authenticatorSelection": {
+      "requireResidentKey": false,
+      "userVerification": "preferred"
+    }
+  };
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
     const getCreds = async () => {
       if (Object.keys(credential).length) {
@@ -63,10 +110,12 @@ const App = props => {
     getCreds();
   }, [credential]);
   const registerPrint = () => {
-    (0,_client__WEBPACK_IMPORTED_MODULE_3__.registerCredential)().then(response => {
-      setCredential(response);
-    });
+    // registerCredential().then((response) => {
+    //   console.log(JSON.stringify(response));
+    setCredential(response);
+    // });
   };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", {
     className: "finger-btn",
     onClick: registerPrint
@@ -34836,7 +34885,7 @@ const isThenable = (thing) =>
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("53d2e08a35108f12fdc1")
+/******/ 		__webpack_require__.h = () => ("af4a2fc8029a04153e03")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

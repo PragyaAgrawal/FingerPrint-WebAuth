@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "start": "webpack --mode development --config config/webpack.config.js && nodemon server.js"
+        "start": "webpack serve --mode development --config config/webpack.config.js"
     },
     "devDependencies": {
         "@simplewebauthn/server": "^6.3.0-alpha.1",
@@ -41,6 +41,7 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "style-loader": "^3.3.2",
-        "webpack-cli": "^5.1.1"
+        "webpack-cli": "^5.1.1",
+        "webpack-dev-server": "^4.15.1"
     }
 }
